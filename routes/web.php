@@ -166,4 +166,41 @@ Route::get('film', function(){
         return view('film', compact('bioskop'));
 });
 
+//akses data model
+Route::get('testmodel', function (){
+    $query =App\Models\Post::all();
+    return $query;
+});
+
+Route::get('/testmodel2', function (){
+    $query = App\Models\Post ::find(1);
+    return $query;
+});
+
+route::get('/testmodel3', function(){
+    $query = App\Models\Post::where('title','like','%i%')->get();
+    return $query;
+});
+
+route::get('/testmodel4', function(){
+    $post = App\Models\Post::find(1);
+    $post->title = "tajwid";
+    $post->save();
+    return $post;
+});
+
+Route::get('testpost', function (){
+    $query =App\Models\Post::all();
+    return view('test-post', compact('query'));
+});
+
+Route::get('testhero', function (){
+    $query =App\Models\Hero::all();
+    return $query;
+});
+
+Route::get('testhero2', function (){
+    $query =App\Models\Hero::all();
+    return view('testhero', compact('query'));
+});
 

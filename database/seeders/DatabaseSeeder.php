@@ -13,6 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(HeroTableSeeder::class);
+        //$this->call(HeroTableSeeder::class);
+        //$this->call(BiodataSeeder::class);
+        //$this->call(barangSeeder::class);
+        $this->call(PesananSeeder::class);
     }
 }

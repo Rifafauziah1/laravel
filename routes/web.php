@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -204,3 +204,18 @@ Route::get('testhero2', function (){
     return view('testhero', compact('query'));
 });
 
+//Route view
+Route::get('beranda', function(){
+    return view('beranda');
+});
+
+//Route Controller
+Route::get('latihan-controller', [MyController::class,'latihan']
+);
+
+//Route Controller
+Route::get('biodata-saya', [MyController::class,'biodatasaya']
+);
+
+Route::get('bio', [MyController::class,'bio']
+);

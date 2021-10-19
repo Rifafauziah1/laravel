@@ -219,3 +219,38 @@ Route::get('biodata-saya', [MyController::class,'biodatasaya']
 
 Route::get('bio', [MyController::class,'bio']
 );
+
+Route::get('barang2', [MyController::class,'barang']
+);
+
+Route::get('pesanan', [MyController::class,'pesanan']
+);
+
+Route::get('pembelian', [MyController::class,'pembelian']
+);
+
+Route::get('pembeli2', [MyController::class,'pembeli']
+);
+
+Route::get('suplier', [MyController::class,'suplier']
+);
+
+Route::get('test/{id}', [MyController::class,'test']
+);
+
+Route::get('test2/{id}', [MyController::class,'test2']
+);
+
+Route::get('test3/{id}', [MyController::class,'test3']
+);
+
+Route::get('test4/{id}', [MyController::class,'test4']
+);
+
+Route::get('test5/{id}', [MyController::class,'test5']
+);
+
+
+
+
+
